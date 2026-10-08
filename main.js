@@ -29,3 +29,10 @@ term.onkeydown = (event) => {
 }
 
 */
+
+
+cool_anim.addEventListener("click", () => {
+    box.classList.remove("anim"); // Reset the animation
+    void box.offsetWidth;            // Trigger a reflow
+    box.classList.add("anim");    // Start the animation
+});

@@ -41,14 +41,56 @@ a:any-link {
 }
 
 #gob {
-        position: absolute;
-        left: 45vw;
-        text-align: center;
+    position: absolute;
+    left: 45vw;
+    text-align: center;
 
-        margin: 20px;
-	padding: 20px;
+    margin: 20px;
+    padding: 20px;
 } 
 
+#box {
+    margin: 20px;
+
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff;
+    position: static;
+
+}
+
+.anim {
+    animation: frem-og-tilbake 5s normal;
+}
+
+@keyframes frem-og-tilbake {
+    0% {
+        background-color: #ffffff;
+        transform: rotate(45deg);
+    }
+    25% {
+        background-color: #5e76ff;
+        border-radius: 10px;
+        transform: rotate(90deg);
+    }
+    50% {
+        background-color: #000000;
+        border-radius: 50px;
+        transform: rotate(180deg);
+    }
+    75% {
+        background-color: #5e76ff;
+        border-radius: 10px;
+        transform: rotate(270deg);
+    }
+    100% {
+        background-color: #ffffff;
+        transform: rotate(360deg);
+    }
+}
+
+/*
 #terminal, #out {
 	resize: none;
 }
@@ -56,3 +98,4 @@ a:any-link {
 #out {
 
 }
+*/
