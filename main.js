@@ -16,7 +16,7 @@ setInterval(() => {
 //	document.querySelector("html").style.backgroundColor = `rgb(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)})` 
 //	document.querySelector("html").style.color = `rgb(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)})` 
 }, 100)
-*/
+
 
 let term = document.getElementById("terminal");
 let out = document.getElementById("out");
@@ -28,4 +28,4 @@ term.onkeydown = (event) => {
     }
 }
 
-
+*/
