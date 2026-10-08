@@ -21,7 +21,7 @@
 
     <body>
         <!-- Web badges :DD --> 
-        <h1 style="margin-bottom: -5px !important;">Oh no...!</h1>
+        <h1 style="margin-bottom: -5px;">Oh no...!</h1>
         <p style="font-size: 12px; margin-bottom: 50px;">Error code: 404</p>
         <p>This page seems to be...<b>not</b> found...?</p>
         <img alt="GIF of a confused cat with a loading circle on his lobe" src="https://media1.tenor.com/m/XoRLL0SkhggAAAAd/livasmol-loading-cat.gif">
@@ -31,9 +31,14 @@
             <li>You wrote a typo in the URL (check if there are any typing errors, e.g. misspelled words)</li>
             <li>The page you were trying is not open to the public yet</li>
         </ul>
-
-        <a href="/about.html" style="font-style: italic;">Back home?</a>
+        
+        <p>Error information for the maintainer of the website (click to highlight all):</p>
+        <textarea id="debug" onfocus="this.select()" readonly></textarea>
+        <br>
+        <p style="font-style: italic;"><a href="/about.html">Back home?</a></p>
         <hr>
         <p style="font-size: 12px;">Source of the GIF: <a href="https://tenor.com/en-GB/view/livasmol-loading-cat-smol-gif-6810651202878211592">tenor</a></p>
+
+        <script src="404.js"></script>
 	</body>
 </html>

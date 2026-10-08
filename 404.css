@@ -19,10 +19,20 @@ html {
     /*color: var(--main-color);*/
     /*background-color: var(--back-color);*/
     font-family: "Roboto", sans-serif;
+    position: absolute;
 }
 
 a:any-link {
     color: var(--main-color);
 }
 
+ul {
+    padding-bottom: 20px;
+}
+
+#debug {
+    width: 50vw;
+    height: 5vw;
+    resize: none;
+}
 
