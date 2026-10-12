@@ -30,7 +30,9 @@ ul {
     padding-bottom: 20px;
 }
 
-h2 {
+h2#header {
+    margin-bottom: -5px;
+    margin-top: 5px;
     font-size: 30px;
 }
 

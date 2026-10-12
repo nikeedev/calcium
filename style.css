@@ -8,12 +8,6 @@
 :root {
     --main-color: #6271f7;
     --back-color: #79bfe8;
-    --bottom-color: var(--back-color);
-    --top-color: var(--main-color);
-    --text-color: var(--main-color);
-    --name: var(--back-color);
-    --link-color: var(--main-color);
-    --link-menubar: var(--back-color);
 }
 
 html {
@@ -26,6 +20,11 @@ a:any-link {
     color: var(--main-color);
 }
 
+h2#header {
+    margin-bottom: -5px;
+    margin-top: 5px;
+    font-size: 30px;
+}
 
 #time {
 	font-weight: bold;
