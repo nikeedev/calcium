@@ -30,6 +30,10 @@ ul {
     padding-bottom: 20px;
 }
 
+h2 {
+    font-size: 30px;
+}
+
 #debug {
     width: 90vw;
     height: 100px;

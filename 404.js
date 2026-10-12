@@ -1,2 +1,36 @@
 debug.innerText += `Error code: 404, link used by user: "${window.location.href}", date: ${new Date()}, uuid: ${crypto.randomUUID()}`
 
+let cats = [
+    {
+        src: "https://media1.tenor.com/m/XoRLL0SkhggAAAAd/livasmol-loading-cat.gif",
+        quote: "This page seems to be...<b>not</b> found...?",
+        alt: "GIF of a confused cat with a loading circle on his lobe."
+    },
+    {
+        src: "https://media1.tenor.com/m/7l4PXSCFjjQAAAAd/huh-cat.gif",
+        quote: "Eh...what the f**k just happened??",
+        alt: "Cat starring with a 'huh' face."
+    },
+    {
+        src: "https://media.tenor.com/7t63GFnoIPUAAAAd/huh-cat-huh-m4rtin.gif",
+        quote: "Huh???",
+        alt: "Cat saying meowing with face looking like it says 'huh'."
+    },
+    {
+        src: "https://media.tenor.com/gHGionfrEJgAAAAd/run-cat-running.gif",
+        quote: "Uh oh!",
+        alt: "A wild cat running around in the house because he got scared.",
+        css: "width: 170px;"
+    }
+]
+
+let random_cat = cats[parseInt(Math.random()*cats.length)]
+
+cat.src = random_cat.src;
+cat.alt = random_cat.alt;
+if (random_cat.css !== "") cat.style = random_cat.css
+quote.innerHTML = random_cat.quote;
+
+
+
+
