@@ -1,5 +1,7 @@
 //  debug.innerText += `Error code: 404, link used by user: "${window.location.href}", date: ${new Date()}, uuid: ${crypto.randomUUID()}`
 
+let cat = document.getElementById("cat") 
+
 // Liste over alle katte gifs og tekster
 let cats = [
     {
@@ -81,12 +83,12 @@ function regen() {
 
 function rotat() {
     // Legg til spinning class som reagerer og roterer katten.
-    document.getElementById("cat").classList.add("spinning");
+    cat.classList.add("spinning");
 }
 
 // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på no.
-document.getElementById("cat").addEventListener("animationend", () => {
-    document.getElementById("cat").classList.remove("spinning");
+cat.addEventListener("animationend", () => {
+    cat.classList.remove("spinning");
 }, { once: true });
 
 
