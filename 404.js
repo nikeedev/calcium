@@ -1,5 +1,6 @@
 //  debug.innerText += `Error code: 404, link used by user: "${window.location.href}", date: ${new Date()}, uuid: ${crypto.randomUUID()}`
 
+// Liste over alle katte gifs og tekster
 let cats = [
     {
         src: "https://media1.tenor.com/m/XoRLL0SkhggAAAAd/livasmol-loading-cat.gif",
@@ -24,43 +25,64 @@ let cats = [
         quote: "Uh oh!",
         alt: "A wild cat running around in the house because he got scared.",
         title: "D'oh! What now???",
-        css: "width: 170px;"
+        width: "170px"
     }
 ]
 
+// Holder styr på hvilken kat vi viser nå
+let current_cat = 0;
+
 function regen() {
-    let random_cat = cats[parseInt(Math.random()*cats.length)]
-    
+    let i = 1;
+
+    // Finner en index i katte-listen så fremt den ikke er lik nåværende katte-index (vi vil ikke få den samme memen andre gang på rad)
+    while (i != current_cat) 
+        i = parseInt(Math.random()*cats.length);
+
+    // få katten 
+    let random_cat = cats[i];
+
+    // Slett bort gamle quote og katt
     cat.children[0].remove();
     quote.children[0].remove();
     
     ///
-
+    // Setter all infoen til det nye bildet, inkludert at størrelsen ikke skal overstige 120px for bilder vanlige uten CSS-nøkkelen (i cats object-en)
     let img = document.createElement("img");
     img.src = random_cat.src;
     img.alt = random_cat.alt;
-    img.style = !random_cat.css ? random_cat.css : "width: 120px";
-    
-    
+
+    // Hvis width varibelen i katte gifen ikke er definert, sett den til width 120px med mindre annet er angitt.
+    if (!random.width) {
+        img.style.width = "120px";
+    } else {
+        img.style.width = random.width;
+    }
+       
+    // Legg til den nye katten i elementet id="cat"
     cat.appendChild(img);
 
     ///
-
+    // Lag text element, og sett quoten lik den
     let text = document.createElement("h2");
-    text.classList.add("header");
+    text.classList.toggle("header");
     text.innerText = random_cat.quote;
     
+    // Legg til den nye katten i elementet id="quote"
     quote.appendChild(text);
 
     ///
+    // Endre tittelen på nettsiden til definert tittel for katten.
     document.title = random_cat.title;
 }
 
 function rotat() {
+    // Legg til spinning class som reagerer og roterer katten.
     cat.classList.toggle("spinning");
 }
 
 cat.addEventListener("animationend", () => {
+    // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket.
     cat.classList.remove("spinning");
 }, { once: true });
 

@@ -48,7 +48,7 @@ h2.header {
     to { transform: rotate(360deg); }
 }
 
-.spinning {
+.spinning img {
     animation: spin 2s linear;
 }
 
