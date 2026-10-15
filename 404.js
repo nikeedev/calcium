@@ -36,8 +36,9 @@ function regen() {
     let i = 0;
 
     // Finner en index i katte-listen så fremt den ikke er lik nåværende katte-index (vi vil ikke få den samme memen andre gang på rad)
-    while (i != current_cat) 
+    while (i == current_cat) 
         i = parseInt(Math.random()*cats.length);
+    
     
     current_cat = i
     // få katten 
