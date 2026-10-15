@@ -1,6 +1,6 @@
 //  debug.innerText += `Error code: 404, link used by user: "${window.location.href}", date: ${new Date()}, uuid: ${crypto.randomUUID()}`
 
-let cat = document.getElementById("cat") 
+let cat = document.querySelector("#cat") 
 
 // Liste over alle katte gifs og tekster
 let cats = [
