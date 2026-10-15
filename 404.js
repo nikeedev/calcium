@@ -33,7 +33,7 @@ let cats = [
 let current_cat = 0;
 
 function regen() {
-    let i = 1;
+    let i = 0;
 
     // Finner en index i katte-listen så fremt den ikke er lik nåværende katte-index (vi vil ikke få den samme memen andre gang på rad)
     while (i != current_cat) 
