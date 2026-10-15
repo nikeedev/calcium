@@ -87,7 +87,7 @@ function regen() {
 
 function rotat() {
     // Legg til spinning class som reagerer og roterer katten.
-    document.querySelector("#cat").classList.toggle("spinning");
+    document.querySelector("#cat").classList.add("spinning");
 }
 
 regen();
