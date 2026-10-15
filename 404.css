@@ -42,12 +42,13 @@ h2.header {
     resize: none;
 }
 
-
+/* roter katten 360 grader */
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
 
+/* roter 360 grader i løpet av 2 sekunder */
 .spinning img {
     animation: spin 2s linear;
 }

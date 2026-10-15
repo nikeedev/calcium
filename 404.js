@@ -53,10 +53,10 @@ function regen() {
     img.alt = random_cat.alt;
 
     // Hvis width varibelen i katte gifen ikke er definert, sett den til width 120px med mindre annet er angitt.
-    if (!random.width) {
+    if (!random_cat.width) {
         img.style.width = "120px";
     } else {
-        img.style.width = random.width;
+        img.style.width = random_cat.width;
     }
        
     // Legg til den nye katten i elementet id="cat"
@@ -82,7 +82,7 @@ function rotat() {
 }
 
 cat.addEventListener("animationend", () => {
-    // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket.
+    // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på noe.
     cat.classList.remove("spinning");
 }, { once: true });
 
