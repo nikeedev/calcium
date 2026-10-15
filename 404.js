@@ -1,7 +1,5 @@
 //  debug.innerText += `Error code: 404, link used by user: "${window.location.href}", date: ${new Date()}, uuid: ${crypto.randomUUID()}`
-
-let cat = document.querySelector("#cat") 
-
+ 
 // Liste over alle katte gifs og tekster
 let cats = [
     {
@@ -63,7 +61,13 @@ function regen() {
     } else {
         img.style.width = random_cat.width;
     }
-       
+   
+    // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på no.
+    img.addEventListener("animationend", (this) => {
+        this.classList.remove("spinning");
+    }, { once: true });
+
+    
     // Legg til den nye katten i elementet id="cat"
     cat_box.appendChild(img);
 
@@ -83,14 +87,8 @@ function regen() {
 
 function rotat() {
     // Legg til spinning class som reagerer og roterer katten.
-    cat.classList.add("spinning");
+    document.querySelector("#cat").classList.add("spinning");
 }
-
-// Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på no.
-cat.addEventListener("animationend", (this) => {
-    this.classList.remove("spinning");
-}, { once: true });
-
 
 regen();
 
