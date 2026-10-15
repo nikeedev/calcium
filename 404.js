@@ -39,7 +39,8 @@ function regen() {
     let img = document.createElement("img");
     img.src = random_cat.src;
     img.alt = random_cat.alt;
-    if (random_cat.css !== "") img.style = random_cat.css;
+    img.style = random_cat.css !== "" ? random_cat.css : "width: 120px;";
+    
     
     cat.appendChild(img);
 
