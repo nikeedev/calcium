@@ -62,9 +62,9 @@ function regen() {
         img.style.width = random_cat.width;
     }
    
-    // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på no.
+    // Hvis animasjonen blir ferdig, slett animasjons-classen "spinning" sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på noe.
     img.addEventListener("animationend", (e) => {
-        document.querySelector("#cat").classList.toggle("spinning");
+        e.currentTarget.classList.toggle("spinning");
     }, { once: true });
 
     
@@ -74,7 +74,7 @@ function regen() {
     ///
     // Lag text element, og sett quoten lik den
     let text = document.createElement("h2");
-    text.classList.toggle("header");
+    text.classList.add("header");
     text.innerHTML = random_cat.quote;
     
     // Legg til den nye katten i elementet id="quote"
