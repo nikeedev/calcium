@@ -83,8 +83,8 @@ function rotat() {
     cat.classList.toggle("spinning");
 }
 
-cat.addEventListener("animationend", () => {
-    // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på noe.
+// Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på no.
+cat.children[0].addEventListener("animationend", () => {
     cat.classList.remove("spinning");
 }, { once: true });
 
