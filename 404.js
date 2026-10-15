@@ -30,12 +30,28 @@ let cats = [
 
 function regen() {
     let random_cat = cats[parseInt(Math.random()*cats.length)]
-
-    cat.src = random_cat.src;
-    cat.alt = random_cat.alt;
-    if (random_cat.css !== "") cat.style = random_cat.css
-    quote.innerHTML = random_cat.quote;
     
+    cat.children[0].remove();
+    quote.children[0].remove();
+    
+    ///
+
+    let img = document.createElement("img");
+    img.src = random_cat.src;
+    img.alt = random_cat.alt;
+    if (random_cat.css !== "") img.style = random_cat.css;
+    
+    cat.appendChild(img);
+
+    ///
+
+    let text = document.createElement("h2");
+    text.classList.add("header");
+    text.innerText = random_cat.quote;
+    
+    quote.appendChild(text);
+
+    ///
     document.title = random_cat.title;
 }
 
