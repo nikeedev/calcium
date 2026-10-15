@@ -81,12 +81,12 @@ function regen() {
 
 function rotat() {
     // Legg til spinning class som reagerer og roterer katten.
-    cat.classList.toggle("spinning");
+    cat.classList.add("spinning");
 }
 
 // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på no.
 cat.addEventListener("animationend", () => {
-    cat.classList.toggle("spinning");
+    cat.classList.remove("spinning");
 }, { once: true });
 
 
