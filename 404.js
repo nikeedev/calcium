@@ -67,7 +67,7 @@ function regen() {
     // Lag text element, og sett quoten lik den
     let text = document.createElement("h2");
     text.classList.toggle("header");
-    text.innerText = random_cat.quote;
+    text.innerHTML = random_cat.quote;
     
     // Legg til den nye katten i elementet id="quote"
     quote.appendChild(text);
