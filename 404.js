@@ -63,8 +63,8 @@ function regen() {
     }
    
     // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på no.
-    img.addEventListener("animationend", (this) => {
-        this.classList.remove("spinning");
+    img.addEventListener("animationend", (e) => {
+        e.currentTarget.classList.remove("spinning");
     }, { once: true });
 
     
