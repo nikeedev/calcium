@@ -45,7 +45,7 @@ function regen() {
     let random_cat = cats[current_cat];
 
     // Slett bort gamle quote og katt
-    cat.children[0].remove();
+    cat_box.children[0].remove();
     quote.children[0].remove();
     
     ///
@@ -53,6 +53,7 @@ function regen() {
     let img = document.createElement("img");
     img.src = random_cat.src;
     img.alt = random_cat.alt;
+    img.id = "cat"
 
     // Hvis width varibelen i katte gifen ikke er definert, sett den til width 120px med mindre annet er angitt.
     if (!random_cat.width) {
@@ -62,7 +63,7 @@ function regen() {
     }
        
     // Legg til den nye katten i elementet id="cat"
-    cat.appendChild(img);
+    cat_box.appendChild(img);
 
     ///
     // Lag text element, og sett quoten lik den
@@ -84,7 +85,7 @@ function rotat() {
 }
 
 // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på no.
-cat.children[0].addEventListener("animationend", () => {
+cat.addEventListener("animationend", () => {
     cat.classList.toggle("spinning");
 }, { once: true });
 

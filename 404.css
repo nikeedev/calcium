@@ -49,7 +49,7 @@ h2.header {
 }
 
 /* roter 360 grader i løpet av 2 sekunder */
-.spinning img {
+.spinning {
     animation: spin 2s linear;
 }
 
