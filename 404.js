@@ -64,7 +64,7 @@ function regen() {
    
     // Hvis animasjonen er ferdig, slettet classen sånn at katten ikke fortsetter å rotere uten at brukeren har trykket på no.
     img.addEventListener("animationend", (e) => {
-        e.currentTarget.classList.remove("spinning");
+        document.querySelector("#cat").classList.toggle("spinning");
     }, { once: true });
 
     
@@ -87,7 +87,7 @@ function regen() {
 
 function rotat() {
     // Legg til spinning class som reagerer og roterer katten.
-    document.querySelector("#cat").classList.add("spinning");
+    document.querySelector("#cat").classList.toggle("spinning");
 }
 
 regen();
